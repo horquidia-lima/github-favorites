@@ -27,7 +27,8 @@ export class Favorites {
   delete(user) {
     const filteredEntries = this.entries.filter(entry => 
       entry.login !== user.login)
-      console.log(filteredEntries)
+      this.entries = filteredEntries
+      this.update()
   }
 }
 
